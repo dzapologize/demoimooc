@@ -7,19 +7,21 @@
            <!-- username -->
           <el-form-item>
               <span class="svg-container">
-                  <el-icon><avatar /></el-icon>
+                <span class="container">
+                  <svg-icon icon="https://res.lgdsunday.club/user.svg"></svg-icon>
+                </span>
               </span>
-              <el-input placeholder="username" name="username" type="text">请输入用户名</el-input>
+              <el-input placeholder="username" name="username" type="text"></el-input>
           </el-form-item>
           <!-- password -->
           <el-form-item>
               <span class="svg-container">
                   <el-icon><avatar /></el-icon>
               </span>
-              <el-input placeholder="password" name="password" >请输入密码</el-input>
-              <!-- <span class="show-pwd">
+              <el-input placeholder="password" name="password" ></el-input>
+              <span class="show-pwd">
                   <el-icon><avatar /></el-icon>
-          </span> -->
+              </span>
           </el-form-item>
 
           <!-- 登陆按钮 -->
@@ -30,6 +32,7 @@
 
 <script setup>
 import { Avatar } from '@element-plus/icons'
+import SvgIcon from '@/components/SvgIcon/index.vue'
 import {} from 'vue'
 </script>
 
@@ -77,5 +80,34 @@ $cursor: #fff;
         caret-color: $cursor;
       }
     }
+  }
+
+  .svg-container {
+    padding: 6px 5px 6px 15px;
+    color: $dark_gray;
+    vertical-align: middle;
+    display: inline-block;
+  }
+
+  .title-container {
+  position: relative;
+
+    .title {
+      font-size: 26px;
+      color: $light_gray;
+      margin: 0px auto 40px auto;
+      text-align: center;
+      font-weight: bold;
+    }
+  }
+
+  .show-pwd {
+    position: absolute;
+    right: 10px;
+    top: 7px;
+    font-size: 16px;
+    color: $dark_gray;
+    cursor: pointer;
+    user-select: none;
   }
 </style>
