@@ -1,0 +1,10 @@
+export const validatePassword = () => {
+  return (rule, value, callback) => {
+    if (value.lenth < 6){
+      callback(new Error('密码不能少于6位'))
+    } else {
+            // eslint-disable-next-line indent
+            callback()
+        }
+    }
+}
